@@ -4,8 +4,12 @@ def sum_of_values_with_foo_in_key_name(my_dict):
     return the sum of all value for keys which have "foo"
     in them.
     """
-    pass
-
+    z = 0
+    for (k, v) in my_dict.iteritems():
+        if 'foo' in k:
+             z += v
+             print z
+    return z
 
 test_1 = {
     "foo": 0,
