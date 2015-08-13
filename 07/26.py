@@ -16,9 +16,22 @@ def calculate_mana_cost(mana_costs):
 
     ignore that value in the cost
     """
-    pass
+    z = 0
+    for k,v in mana_costs.iteritems():
+        if 'white' in k:
+            z += v
+        elif 'blue' in k:
+            z += v
+        elif 'black' in k:
+            z += v
+        elif 'green' in k:
+            z += v
+        elif 'red' in k:
+            z += v
+        elif 'colorless' in k:
+            z += v
 
-
+    return z
 verdant_force = {
     "green": 3,
     "colorless": 5
