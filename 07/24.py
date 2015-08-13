@@ -3,7 +3,7 @@ def sum_all_values(my_dict):
     given a dictionary of <string, int> mappings,
     return the sum of all the values.
     """
-
+    return (sum(my_dict.values()))
 
 
 test_1 = {
