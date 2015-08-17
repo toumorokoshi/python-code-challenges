@@ -6,8 +6,15 @@ class Deck(object):
     Deck has a method draw() that returns the card at the current top
     of the deck, and removes the top card from the deck.
     """
-    pass
+    def __init__(self,deck):
+        self.deck = deck
 
+    def draw (self):
+        for x in self.deck:
+            print x
+            z = x
+            self.deck.remove(x)
+            return z
 
 ACE_OF_SPADES = "ace of spades"
 KING_OF_HEARTS = "king of hearts"
