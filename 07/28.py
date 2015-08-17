@@ -5,11 +5,14 @@ def all_sliver_users(card_names_by_person):
     return a list of all users who own a card with "sliver" in
     the name.
     """
-    return [
-        k for k, v in card_names_by_person.items() if
-        any(["sliver" in c for c in v])
-    ]
-
+    z= []
+    for k,v in card_names_by_person.items():
+        for x in v:
+            if  "sliver" in x:
+                z.append(k)
+                print z
+                break
+    return z
 
 test = {
     "calciumcrusader": ["flying sliver", "muscle sliver"],
